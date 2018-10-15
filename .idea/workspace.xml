@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8a7ea60e-8236-4dac-b646-614246cec318" name="Default Changelist" comment="" />
+    <list default="true" id="8a7ea60e-8236-4dac-b646-614246cec318" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rumo_web/src/main/resources/templates/archives.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/rumo_web/src/main/resources/templates/archives.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rumo_web/src/main/resources/templates/index.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/rumo_web/src/main/resources/templates/index.ftl" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/rumo_web/target/" />
@@ -21,24 +25,24 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="ftl" value="122" />
-          <entry key="java" value="245" />
+          <entry key="ftl" value="358" />
+          <entry key="java" value="389" />
           <entry key="xml" value="21" />
           <entry key="yml" value="107" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="FTL" value="122" />
-          <entry key="JAVA" value="245" />
+          <entry key="FTL" value="358" />
+          <entry key="JAVA" value="389" />
           <entry key="XML" value="21" />
           <entry key="YAML" value="107" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="ftl" value="6" />
-          <entry key="java" value="2" />
+          <entry key="ftl" value="10" />
+          <entry key="java" value="4" />
           <entry key="js" value="4" />
           <entry key="xml" value="1" />
           <entry key="yml" value="1" />
@@ -46,8 +50,8 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="FTL" value="6" />
-          <entry key="JAVA" value="2" />
+          <entry key="FTL" value="10" />
+          <entry key="JAVA" value="4" />
           <entry key="JavaScript" value="4" />
           <entry key="XML" value="1" />
           <entry key="YAML" value="1" />
@@ -57,15 +61,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rumo_web/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
@@ -78,8 +73,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rumo_web/src/main/java/cn/rumoss/web/WebApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+            <state relative-caret-position="136">
+              <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#254#255#0" expanded="true" />
@@ -90,19 +85,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rumo_web/src/main/resources/application.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rumo_web/src/main/java/cn/rumoss/web/controller/FmController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="98" column="29" selection-start-line="98" selection-start-column="29" selection-end-line="98" selection-end-column="29" />
+            <state relative-caret-position="355">
+              <caret line="50" column="36" selection-start-line="50" selection-start-column="28" selection-end-line="50" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#570#591#0" expanded="true" />
@@ -119,28 +105,82 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rumo_web/src/main/resources/templates/freemarker.ftl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="26" column="15" lean-forward="true" selection-start-line="23" selection-start-column="7" selection-end-line="26" selection-end-column="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/rumo_web/src/main/resources/templates/index.ftl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="58" selection-start-line="16" selection-start-column="58" selection-end-line="16" selection-end-column="58" />
+            <state relative-caret-position="1324">
+              <caret line="79" column="25" lean-forward="true" selection-start-line="77" selection-start-column="4" selection-end-line="79" selection-end-column="25" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rumo_web/src/main/resources/templates/header.ftl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="46" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rumo_web/src/main/resources/templates/footer.ftl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="55" selection-start-line="5" selection-start-column="55" selection-end-line="5" selection-end-column="55" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rumo_web/src/main/java/cn/rumoss/web/config/WebsiteInfoConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="18" column="43" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
+              <folding>
+                <element signature="e#304#305#0" expanded="true" />
+                <element signature="e#349#350#0" expanded="true" />
+                <element signature="e#407#408#0" expanded="true" />
+                <element signature="e#436#437#0" expanded="true" />
+                <element signature="e#304#305#0" expanded="true" />
+                <element signature="e#349#350#0" expanded="true" />
+                <element signature="e#419#420#0" expanded="true" />
+                <element signature="e#464#465#0" expanded="true" />
+                <element signature="e#538#539#0" expanded="true" />
+                <element signature="e#583#584#0" expanded="true" />
+                <element signature="e#641#642#0" expanded="true" />
+                <element signature="e#686#687#0" expanded="true" />
+                <element signature="e#739#740#0" expanded="true" />
+                <element signature="e#763#764#0" expanded="true" />
+                <element signature="e#829#830#0" expanded="true" />
+                <element signature="e#854#855#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/rumo_web/src/main/resources/templates/archives.ftl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="124" column="37" selection-start-line="124" selection-start-column="34" selection-end-line="124" selection-end-column="37" />
+            <state relative-caret-position="765">
+              <caret line="45" column="37" selection-start-line="45" selection-start-column="37" selection-end-line="45" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rumo_web/src/main/resources/templates/comments.ftl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1139">
+              <caret line="67" lean-forward="true" selection-start-line="67" selection-end-line="67" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rumo_web/src/main/resources/templates/nav.ftl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="10" lean-forward="true" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -154,6 +194,14 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>articles</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -162,9 +210,14 @@
         <option value="$PROJECT_DIR$/rumo_web/pom.xml" />
         <option value="$PROJECT_DIR$/rumo_web/src/main/resources/templates/freemarker.ftl" />
         <option value="$PROJECT_DIR$/rumo_web/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/rumo_web/src/main/resources/templates/index.ftl" />
-        <option value="$PROJECT_DIR$/rumo_web/src/main/resources/templates/archives.ftl" />
         <option value="$PROJECT_DIR$/rumo_web/src/main/java/cn/rumoss/web/controller/FmController.java" />
+        <option value="$PROJECT_DIR$/rumo_web/src/main/resources/templates/footer.ftl" />
+        <option value="$PROJECT_DIR$/rumo_web/src/main/resources/templates/header.ftl" />
+        <option value="$PROJECT_DIR$/rumo_web/src/main/java/cn/rumoss/web/config/WebsiteInfoConfig.java" />
+        <option value="$PROJECT_DIR$/rumo_web/src/main/resources/templates/index.ftl" />
+        <option value="$PROJECT_DIR$/rumo_web/src/main/resources/templates/nav.ftl" />
+        <option value="$PROJECT_DIR$/rumo_web/src/main/resources/templates/archives.ftl" />
+        <option value="$PROJECT_DIR$/rumo_web/src/main/resources/templates/comments.ftl" />
       </list>
     </option>
   </component>
@@ -194,6 +247,7 @@
     <option name="width" value="1284" />
     <option name="height" value="728" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -209,6 +263,58 @@
               <item name="rumo_blog" type="b2602c69:ProjectViewProjectNode" />
               <item name="rumo_blog" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="rumo_blog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rumo_blog" type="462c0819:PsiDirectoryNode" />
+              <item name="rumo_web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="rumo_blog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rumo_blog" type="462c0819:PsiDirectoryNode" />
+              <item name="rumo_web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="rumo_blog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rumo_blog" type="462c0819:PsiDirectoryNode" />
+              <item name="rumo_web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="rumo_blog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rumo_blog" type="462c0819:PsiDirectoryNode" />
+              <item name="rumo_web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="rumo_blog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rumo_blog" type="462c0819:PsiDirectoryNode" />
+              <item name="rumo_web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="rumo_blog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rumo_blog" type="462c0819:PsiDirectoryNode" />
+              <item name="rumo_web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="rumo_blog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rumo_blog" type="462c0819:PsiDirectoryNode" />
+              <item name="rumo_web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -222,7 +328,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539608749193" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539614793176" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
@@ -233,10 +339,10 @@
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\Study\Code\WorkSpace\idea\rumo_blog\rumo_web\src\main\resources\templates" />
+      <recent name="E:\Study\Code\WorkSpace\idea\rumo_blog\rumo_web\src\main\java\cn\rumoss\web\config" />
       <recent name="E:\Study\Code\WorkSpace\idea\rumo_blog\rumo_web\src\main\resources\static" />
       <recent name="E:\Study\Code\WorkSpace\idea\rumo_blog\rumo_web\src\main\resources" />
       <recent name="E:\Study\Code\WorkSpace\idea\rumo_blog\rumo_web\src\main\resources\templates\usr" />
-      <recent name="E:\Study\Code\WorkSpace\idea\rumo_blog\rumo_web\src\main\java\cn\rumoss\web" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -281,12 +387,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1539601416438</updated>
-      <workItem from="1539601417686" duration="7095000" />
+      <workItem from="1539601417686" duration="11831000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7095000" />
+    <option name="totallyTimeSpent" value="11831000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1314" height="784" extended-state="6" />
@@ -298,18 +404,18 @@
       <window_info id="Capture Tool" order="3" />
       <window_info id="Web" order="4" side_tool="true" />
       <window_info id="Designer" order="5" />
-      <window_info active="true" content_ui="combo" id="Project" order="6" visible="true" weight="0.1291866" />
+      <window_info content_ui="combo" id="Project" order="6" visible="true" weight="0.2416268" />
       <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="0" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="2" />
       <window_info anchor="bottom" id="Java Enterprise" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="4" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="5" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="5" />
       <window_info anchor="bottom" id="Spring" order="6" />
       <window_info anchor="bottom" id="Message" order="7" />
       <window_info anchor="bottom" id="Find" order="8" weight="0.32924962" />
-      <window_info anchor="bottom" id="Run" order="9" visible="true" weight="0.22817764" />
+      <window_info active="true" anchor="bottom" id="Run" order="9" visible="true" weight="0.17177914" />
       <window_info anchor="bottom" id="Debug" order="10" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="11" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="12" weight="0.4" />
@@ -356,13 +462,6 @@
     <entry file="file://$PROJECT_DIR$/rumo_web/src/main/resources/static/usr/themes/lpisme/js/prism.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/rumo_web/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/rumo_web/src/main/resources/application.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -370,17 +469,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rumo_web/src/main/resources/templates/archives.ftl">
+    <entry file="file://$PROJECT_DIR$/rumo_web/src/main/resources/templates/freemarker.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="124" column="37" selection-start-line="124" selection-start-column="34" selection-end-line="124" selection-end-column="37" />
+        <state relative-caret-position="442">
+          <caret line="26" column="15" selection-start-line="23" selection-start-column="7" selection-end-line="26" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rumo_web/src/main/java/cn/rumoss/web/WebApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#254#255#0" expanded="true" />
+            <element signature="e#318#319#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/rumo_web/src/main/java/cn/rumoss/web/controller/FmController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="98" column="29" selection-start-line="98" selection-start-column="29" selection-end-line="98" selection-end-column="29" />
+        <state relative-caret-position="355">
+          <caret line="50" column="36" selection-start-line="50" selection-start-column="28" selection-end-line="50" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#570#591#0" expanded="true" />
@@ -395,29 +506,77 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rumo_web/src/main/java/cn/rumoss/web/WebApplication.java">
+    <entry file="file://$PROJECT_DIR$/rumo_web/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        <state relative-caret-position="68">
+          <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rumo_web/src/main/java/cn/rumoss/web/config/WebsiteInfoConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="18" column="43" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#254#255#0" expanded="true" />
-            <element signature="e#318#319#0" expanded="true" />
+            <element signature="e#304#305#0" expanded="true" />
+            <element signature="e#349#350#0" expanded="true" />
+            <element signature="e#407#408#0" expanded="true" />
+            <element signature="e#436#437#0" expanded="true" />
+            <element signature="e#304#305#0" expanded="true" />
+            <element signature="e#349#350#0" expanded="true" />
+            <element signature="e#419#420#0" expanded="true" />
+            <element signature="e#464#465#0" expanded="true" />
+            <element signature="e#538#539#0" expanded="true" />
+            <element signature="e#583#584#0" expanded="true" />
+            <element signature="e#641#642#0" expanded="true" />
+            <element signature="e#686#687#0" expanded="true" />
+            <element signature="e#739#740#0" expanded="true" />
+            <element signature="e#763#764#0" expanded="true" />
+            <element signature="e#829#830#0" expanded="true" />
+            <element signature="e#854#855#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rumo_web/src/main/resources/templates/freemarker.ftl">
+    <entry file="file://$PROJECT_DIR$/rumo_web/src/main/resources/templates/nav.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="15" lean-forward="true" selection-start-line="23" selection-start-column="7" selection-end-line="26" selection-end-column="15" />
+        <state relative-caret-position="153">
+          <caret line="9" column="10" lean-forward="true" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rumo_web/src/main/resources/templates/header.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="46" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rumo_web/src/main/resources/templates/footer.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="55" selection-start-line="5" selection-start-column="55" selection-end-line="5" selection-end-column="55" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/rumo_web/src/main/resources/templates/index.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="58" selection-start-line="16" selection-start-column="58" selection-end-line="16" selection-end-column="58" />
+        <state relative-caret-position="1324">
+          <caret line="79" column="25" lean-forward="true" selection-start-line="77" selection-start-column="4" selection-end-line="79" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rumo_web/src/main/resources/templates/comments.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1139">
+          <caret line="67" lean-forward="true" selection-start-line="67" selection-end-line="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rumo_web/src/main/resources/templates/archives.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="45" column="37" selection-start-line="45" selection-start-column="37" selection-end-line="45" selection-end-column="37" />
         </state>
       </provider>
     </entry>
