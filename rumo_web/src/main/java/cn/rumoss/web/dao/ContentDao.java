@@ -1,0 +1,14 @@
+package cn.rumoss.web.dao;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
+
+import cn.rumoss.web.pojo.Content;
+/**
+ * 内容表(post-文章,draft-草稿,page-页面,link-链接,attachment-文件)数据访问接口
+ * @author Administrator
+ *
+ */
+public interface ContentDao extends JpaRepository<Content,String>,JpaSpecificationExecutor<Content>{
+	
+}
