@@ -32,6 +32,41 @@ public class FmController {
         return "freemarker";
     }
 
+    @RequestMapping("/timeline")
+    public String timeline(Map<String,Object> map) {
+        map.put("name", "Joe");
+        map.put("sex", 1);    //sex:性别，1：男；0：女；
+        // 模拟数据
+        List<Map<String, Object>> timelines = new ArrayList<Map<String, Object>>();
+        Map<String, Object> timeline = new HashMap<String, Object>();
+        timeline.put("date", "2018年 10月1日");
+        timeline.put("intro", "开始萌生想法~");
+        timeline.put("more", "反应式编程模型是目前编程世界的大势所趋。Java服务框架中的扛把子Spring会在5.0中全面拥抱反应式编程模型，这意味着广大的Java程序员都开始有可能接触反应式编程的思想，除非他们的项目永远被三体人锁死在了Spring 4。");
+        timelines.add(timeline);
+        timeline = new HashMap<String, Object>();
+        timeline.put("date", "2018年 10月5日");
+        timeline.put("intro", "开始萌生想法~");
+        timeline.put("more", "反应式编程模型是目前编程世界的大势所趋。Java服务框架中的扛把子Spring会在5.0中全面拥抱反应式编程模型，这意味着广大的Java程序员都开始有可能接触反应式编程的思想，除非他们的项目永远被三体人锁死在了Spring 4。");
+        timelines.add(timeline);
+        timeline = new HashMap<String, Object>();
+        timeline.put("date", "2018年 10月10日");
+        timeline.put("intro", "开始萌生想法~");
+        timeline.put("more", "反应式编程模型是目前编程世界的大势所趋。Java服务框架中的扛把子Spring会在5.0中全面拥抱反应式编程模型，这意味着广大的Java程序员都开始有可能接触反应式编程的思想，除非他们的项目永远被三体人锁死在了Spring 4。");
+        timelines.add(timeline);
+        timeline = new HashMap<String, Object>();
+        timeline.put("date", "2018年 10月15日");
+        timeline.put("intro", "开始萌生想法~");
+        timeline.put("more", "反应式编程模型是目前编程世界的大势所趋。Java服务框架中的扛把子Spring会在5.0中全面拥抱反应式编程模型，这意味着广大的Java程序员都开始有可能接触反应式编程的思想，除非他们的项目永远被三体人锁死在了Spring 4。");
+        timelines.add(timeline);
+        timeline = new HashMap<String, Object>();
+        timeline.put("date", "2018年 10月16日");
+        timeline.put("intro", "开始萌生想法~");
+        timeline.put("more", "反应式编程模型是目前编程世界的大势所趋。Java服务框架中的扛把子Spring会在5.0中全面拥抱反应式编程模型，这意味着广大的Java程序员都开始有可能接触反应式编程的思想，除非他们的项目永远被三体人锁死在了Spring 4。");
+        timelines.add(timeline);
+        map.put("timelines", timelines);
+        return "timeline";
+    }
+
     @RequestMapping("/index")
     public String index(Map<String,Object> map) {
         // 模拟数据
