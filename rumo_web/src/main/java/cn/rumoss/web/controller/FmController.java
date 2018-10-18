@@ -1,7 +1,16 @@
 package cn.rumoss.web.controller;
 
+import cn.rumoss.common.entity.Result;
+import cn.rumoss.common.entity.StatusCode;
+import cn.rumoss.common.util.DateUtil;
+import cn.rumoss.web.pojo.Content;
+import cn.rumoss.web.service.ContentService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -14,25 +23,7 @@ import java.util.Map;
 @Controller
 public class FmController {
 
-    @RequestMapping("/freemarker")
-    public String freemarker(Map<String,Object> map) {
-        map.put("name", "Joe");
-        map.put("sex", 1);    //sex:性别，1：男；0：女；
-        // 模拟数据
-        List<Map<String, Object>> friends = new ArrayList<Map<String, Object>>();
-        Map<String, Object> friend = new HashMap<String, Object>();
-        friend.put("name", "xbq");
-        friend.put("age", 22);
-        friends.add(friend);
-        friend = new HashMap<String, Object>();
-        friend.put("name", "July");
-        friend.put("age", 18);
-        friends.add(friend);
-        map.put("friends", friends);
-        return "freemarker";
-    }
-
-    @RequestMapping("/timeline")
+   @RequestMapping("/timeline")
     public String timeline(Map<String,Object> map) {
         map.put("name", "Joe");
         map.put("sex", 1);    //sex:性别，1：男；0：女；
@@ -67,22 +58,43 @@ public class FmController {
         return "timeline";
     }
 
-    @RequestMapping("/index")
-    public String index(Map<String,Object> map) {
-        // 模拟数据
-        List<Map<String, Object>> articles = new ArrayList<Map<String, Object>>();
+    @Autowired
+    private ContentService contentService;
+
+    @RequestMapping(value="/{id}",method= RequestMethod.GET)
+    public Result findById(@PathVariable String id){
+        return new Result(true, StatusCode.OK,"查询成功",contentService.findById(id));
+    }
+
+    @RequestMapping("/article/{cid}")
+    public String article(@PathVariable Long cid, Map<String,Object> map) {
+        Content content= contentService.findByCId(cid);
         Map<String, Object> article = new HashMap<String, Object>();
-        article.put("datePublished", "October 17th , 2018");
-        article.put("title", "MongoDB基础入门(二)");
-        article.put("articleBody", "&nbsp; &nbsp; 本文为 MongoDB 基本命令，用来记录学习。 一.插入与查询 1.选择(创建)数据库 &nbsp;&nbsp;&nbsp;&nbsp;数据库不存在就会创建。 --...");
+        article.put("datePublished", DateUtil.longToString(content.getCreated(),DateUtil.DATE_FORMAT_001));
+        article.put("title", content.getTitle());
+        article.put("articleBody", content.getText());
         article.put("category", "NoSQL");
-        articles.add(article);
-        article = new HashMap<String, Object>();
-        article.put("datePublished", "October 7th , 2018");
-        article.put("title", "MongoDB基础入门(一)");
-        article.put("articleBody", "&nbsp; &nbsp; 本文为 MongoDB 基本命令，用来记录学习。 一.插入与查询 1.选择(创建)数据库 &nbsp;&nbsp;&nbsp;&nbsp;数据库不存在就会创建。 --...");
-        article.put("category", "SQL");
-        articles.add(article);
+        article.put("dateModified", DateUtil.longToString(content.getModified(),DateUtil.DATE_FORMAT_001));
+        map.put("article", article);
+        return "article";
+    }
+
+    @RequestMapping("/")
+    public String index(Map<String,Object> map) {
+        map.put("type","post");// 查询发布的文章
+        Page<Content> pageList = contentService.findSearchOrdered(map, 1, 6);
+        List<Content> contents = pageList.getContent();
+        List<Map<String, Object>> articles = new ArrayList<Map<String, Object>>();
+        for(int i=0;i<contents.size();i++){
+            Map<String, Object> article = new HashMap<String, Object>();
+            Content content = contents.get(i);
+            article.put("cid", content.getCid());
+            article.put("datePublished", DateUtil.longToStringEN(content.getCreated()*1000,DateUtil.DATE_FORMAT_002));
+            article.put("title", content.getTitle());
+            article.put("articleBody", content.getSlug());
+            article.put("category", "NoSQL");
+            articles.add(article);
+        }
         map.put("articles", articles);
         return "index";
     }

@@ -1,22 +1,15 @@
 package cn.rumoss.web.service;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 
-import javax.persistence.criteria.CriteriaBuilder;
-import javax.persistence.criteria.CriteriaQuery;
-import javax.persistence.criteria.Expression;
-import javax.persistence.criteria.Predicate;
-import javax.persistence.criteria.Root;
-import javax.persistence.criteria.Selection;
+import javax.persistence.criteria.*;
 
 import cn.rumoss.common.util.IdWorker;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 
@@ -61,6 +54,19 @@ public class ContentService {
 		return contentDao.findAll(specification, pageRequest);
 	}
 
+	/**
+	 * 条件查询+分页(创建时间排序)
+	 * @param whereMap
+	 * @param page
+	 * @param size
+	 * @return
+	 */
+	public Page<Content> findSearchOrdered(Map whereMap, int page, int size) {
+		whereMap.put("orderby","created@desc");
+		Specification<Content> specification = createSpecification(whereMap);
+		PageRequest pageRequest =  PageRequest.of(page-1, size);
+		return contentDao.findAll(specification, pageRequest);
+	}
 	
 	/**
 	 * 条件查询
@@ -158,12 +164,31 @@ public class ContentService {
                 if (searchMap.get("allowFeed")!=null && !"".equals(searchMap.get("allowFeed"))) {
                 	predicateList.add(cb.like(root.get("allowFeed").as(String.class), "%"+(String)searchMap.get("allowFeed")+"%"));
                 }
+                // 是否有排序请求
+				String orderby = searchMap.get("orderby")==null?null: (String) searchMap.get("orderby");
+				if(orderby!=null && !"".equals(orderby)){
+					String[] os = orderby.split("@");
+					if("asc".equals(os[1])){// 升序
+						query.orderBy(cb.asc(root.get(os[0])));
+					}else if("desc".equals(os[1])){// 降序
+						query.orderBy(cb.desc(root.get(os[0])));
+					}
+				}
 				
 				return cb.and( predicateList.toArray(new Predicate[predicateList.size()]));
 
 			}
 		};
 
+	}
+
+	/**
+	 * 根据cid查询Content
+	 * @param cid
+	 * @return
+	 */
+	public Content findByCId(Long cid) {
+		return contentDao.findByCid(cid);
 	}
 
 }

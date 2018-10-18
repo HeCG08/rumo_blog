@@ -1,7 +1,10 @@
 package cn.rumoss.web.config;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ModelAttribute;
+
+import javax.servlet.http.HttpServletRequest;
 
 /**
  *  网站信息配置
@@ -9,9 +12,17 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 @ControllerAdvice // 全局注入
 public class WebsiteInfoConfig {
 
+    @Autowired
+    private HttpServletRequest request;
+
     @ModelAttribute(name = "logo_title")
     public Object title(){
         return "濡沫杂记";
+    }
+
+    @ModelAttribute(name = "logo_url")
+    public Object url(){
+        return request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort();
     }
 
     @ModelAttribute(name = "motto_desc")

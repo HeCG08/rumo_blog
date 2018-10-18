@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿<#assign base = request.contextPath />
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
       xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
 <head>
@@ -11,11 +12,11 @@
 <title>濡沫杂记</title>
 <meta name="keywords" content="濡沫杂记">
 <meta name="description" content="濡沫杂记">
-<link rel="shortcut icon" href="res\pic\rumoss__48X48.ico">
-<link rel="apple-touch-icon" href="res\pic\rumoss__48X48.ico">
-<link rel="stylesheet" href="usr\themes\lpisme\assets\prism.css">
-<link rel="stylesheet" href="usr\themes\lpisme\assets\style.css">
-<link rel="stylesheet" href="usr\themes\lpisme\style.css">
+<link rel="shortcut icon" href="${base}\res\pic\rumoss__48X48.ico">
+<link rel="apple-touch-icon" href="${base}\res\pic\rumoss__48X48.ico">
+<link rel="stylesheet" href="${base}\usr\themes\lpisme\assets\prism.css">
+<link rel="stylesheet" href="${base}\usr\themes\lpisme\assets\style.css">
+<link rel="stylesheet" href="${base}\usr\themes\lpisme\style.css">
 </head>
     <body class="null" gtools_scp_screen_capture_injected="true">
 
@@ -39,22 +40,22 @@
                                     ${item.datePublished}
                                 </div>
                                 <div class="index-post-title" itemprop="name headline">
-                                    <a href="archives\144\index.htm" title="${item.title}" itemtype="url">${item.title}</a>
+                                    <a href="${base}\article\${item.cid}" title="${item.title}" itemtype="url">${item.title}</a>
                                 </div>
                             </div>
                             <div class="index-post-content" itemprop="articleBody">
                                 ${item.articleBody}
                             </div>
                             <div class="index-post-thumb">
-                                <a class="index-post-cover" href="archives\144\index.htm">
+                                <a class="index-post-cover" href="${base}\article\${item.cid}">
                                     <img class="thumb" src="usr\uploads\2018\10\3994839060.jpg?imageView2/4/w/600/h/100%">
                                 </a>
                             </div>
                             <div class="index-post-meta cf">
-                                <div class="index-post-button"><a href="archives\144\index.htm"> Read more </a>
+                                <div class="index-post-button"><a href="${base}\article\${item.cid}"> Read more </a>
                                 </div>
                                 <div class="index-post-button index-post-comments">
-                                    <a href="archives\144\index.htm#comments"> No comment </a>
+                                    <a href="${base}\article\${item.cid}#comments"> No comment </a>
                                 </div>
                                 <div class="index-post-category">
                                     <a href="category\NoSQL\index.htm">${item.category}</a>
@@ -78,10 +79,10 @@
     <!-- 引入footer部分开始 -->
     <#include "footer.ftl" encoding="UTF-8" parse=true>
     <!-- 引入footer部分结束 -->
-		
-	<script src="usr\themes\lpisme\js\functions.js"></script>
-	<script src="usr\themes\lpisme\js\fastclick.js"></script>
-	<script src="usr\themes\lpisme\js\prism.js"></script>
+
+	<script src="${base}\usr\themes\lpisme\js\functions.js"></script>
+	<script src="${base}\usr\themes\lpisme\js\fastclick.js"></script>
+	<script src="${base}\usr\themes\lpisme\js\prism.js"></script>
 
 	</body>
 </html>

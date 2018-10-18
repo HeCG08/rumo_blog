@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿<#assign base = request.contextPath />
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
       xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
 <head>
@@ -11,11 +12,11 @@
 <title>文章归档 - 濡沫杂记</title>
 <meta name="keywords" content="濡沫杂记">
 <meta name="description" content="濡沫杂记">
-<link rel="shortcut icon" href="res\pic\rumoss__48X48.ico">
-<link rel="apple-touch-icon" href="res\pic\rumoss__48X48.ico">
-<link rel="stylesheet" href="usr\themes\lpisme\assets\prism.css">
-<link rel="stylesheet" href="usr\themes\lpisme\assets\style.css">
-<link rel="stylesheet" href="usr\themes\lpisme\style.css">
+<link rel="shortcut icon" href="${base}\res\pic\rumoss__48X48.ico">
+<link rel="apple-touch-icon" href="${base}\res\pic\rumoss__48X48.ico">
+<link rel="stylesheet" href="${base}\usr\themes\lpisme\assets\prism.css">
+<link rel="stylesheet" href="${base}\usr\themes\lpisme\assets\style.css">
+<link rel="stylesheet" href="${base}\usr\themes\lpisme\style.css">
 </head>
     <body class="null" gtools_scp_screen_capture_injected="true">
 
@@ -92,10 +93,10 @@
 <script type="text/javascript">
 </script>
 		
-	<script src="usr\themes\lpisme\js\functions.js"></script>
+	<script src="${base}\usr\themes\lpisme\js\functions.js"></script>
 	
-	<script src="usr\themes\lpisme\js\fastclick.js"></script>
-	<script src="usr\themes\lpisme\js\prism.js"></script>
+	<script src="${base}\usr\themes\lpisme\js\fastclick.js"></script>
+	<script src="${base}\usr\themes\lpisme\js\prism.js"></script>
 	
 	</body>
 </html>
