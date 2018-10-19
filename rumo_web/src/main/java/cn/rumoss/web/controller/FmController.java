@@ -58,6 +58,11 @@ public class FmController {
         return "timeline";
     }
 
+    @RequestMapping("/about")
+    public String about(Map<String,Object> map) {
+        return "about";
+    }
+
     @Autowired
     private ContentService contentService;
 

@@ -20,3 +20,6 @@
         &copy; 2018 <a href="index.htm">濡沫杂记</a>&nbsp;&nbsp;&nbsp;&nbsp;小站已运行&nbsp;<span class="codename">${run_year}</span>&nbsp;年&nbsp;<span class="codename">${run_day}</span>&nbsp;天&nbsp;&nbsp;&nbsp;&nbsp;
     </div>
 </div>
+<script src="${base}\usr\themes\lpisme\js\functions.js"></script>
+<script src="${base}\usr\themes\lpisme\js\fastclick.js"></script>
+<script src="${base}\usr\themes\lpisme\js\prism.js"></script>

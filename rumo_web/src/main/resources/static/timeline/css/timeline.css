@@ -12,7 +12,6 @@ a{text-decoration:none;}
 
 hr{height:0;border-left:none;border-right:0;border-top:1px dashed #2d2f34;border-bottom:1px dashed #474954;}
 a{color:#666;text-decoration:none;}
-a:hover{color:#F60;text-decoration:underline;}
 .clearfix{*zoom:1;}
 .clearfix:before,.clearfix:after{display:table;content:"";}
 .clearfix:after{clear:both;}

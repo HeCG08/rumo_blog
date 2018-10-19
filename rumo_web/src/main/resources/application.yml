@@ -17,6 +17,7 @@ spring:
     expose-session-attributes: false
     expose-spring-macro-helpers: false
     request-context-attribute: request
+    template-loader-path: ["classpath:/templates/","classpath:/templates/meta/"] # 设置FreeMarker加载模板的位置,在页面中直接使用名字引用
   jpa:
     show-sql: true
     database: mysql
