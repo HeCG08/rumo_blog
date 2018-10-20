@@ -17,10 +17,10 @@
 </form>
 <nav class="nav">
     <div class="nav-wrapper right">
-        <a href="${base}\archives" title="文章归档">文章归档</a>
-        <a href="${base}\timeline" title="时间线">时间线</a>
-        <!-- <a href="books.htm" title="读书贫道">读书贫道</a>
-        <a href="links.htm" title="友链">友链</a>-->
-        <a href="${base}\about" title="关于小站">关于小站</a>
+        <a href="${base}\archives.html" title="文章归档">文章归档</a>
+        <a href="${base}\books.html" title="读书贫道">读书贫道</a>
+        <a href="${base}\timeline.html" title="时间线">时间线</a>
+        <a href="${base}\links.html" title="基友们">基友们</a>
+        <a href="${base}\about.html" title="关于小站">关于小站</a>
     </div>
 </nav>
