@@ -3,7 +3,10 @@ package cn.rumoss.web.controller;
 import cn.rumoss.common.entity.Result;
 import cn.rumoss.common.entity.StatusCode;
 import cn.rumoss.common.util.DateUtil;
+import cn.rumoss.common.util.RmUtil;
+import cn.rumoss.web.pojo.Comment;
 import cn.rumoss.web.pojo.Content;
+import cn.rumoss.web.service.CommentService;
 import cn.rumoss.web.service.ContentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -139,7 +142,8 @@ public class FmController {
 
     @Autowired
     private ContentService contentService;
-
+    @Autowired
+    private CommentService commentService;
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     public Result findById(@PathVariable String id) {
         return new Result(true, StatusCode.OK, "查询成功", contentService.findById(id));
@@ -148,6 +152,7 @@ public class FmController {
     @RequestMapping("/article/{cid}")
     public String article(@PathVariable Long cid, Map<String, Object> map) {
         Content content = contentService.findByCId(cid);
+        List<Comment> comments = commentService.findAllByCid(cid);// 查询文章下面的所有评论
         Map<String, Object> article = new HashMap<String, Object>();
         article.put("datePublished", DateUtil.longToString(content.getCreated(), DateUtil.DATE_FORMAT_001));
         article.put("title", content.getTitle());
@@ -155,6 +160,8 @@ public class FmController {
         article.put("category", "NoSQL");
         article.put("dateModified", DateUtil.longToString(content.getModified(), DateUtil.DATE_FORMAT_001));
         map.put("article", article);
+        map.put("comments", comments);
+        map.put("rmUtil", new RmUtil());
         return "article";
     }
 
@@ -172,6 +179,7 @@ public class FmController {
             article.put("title", content.getTitle());
             article.put("articleBody", content.getSlug());
             article.put("category", "NoSQL");
+            article.put("commentsNum", content.getCommentsNum()==0?"No":content.getCommentsNum());
             articles.add(article);
         }
         map.put("articles", articles);

@@ -14,7 +14,7 @@
         <a href="http://www.miitbeian.gov.cn/" rel="nofollow" target="_blank">${icp_no}</a>
     </div>
     <div>
-        Theme is <span class="codename">Lpisme</span> by <a href="https://www.linpx.com" target="_blank">Chakhsu</a> / Powered by <a href="https://spring.io/projects/spring-boot" target="_blank">SpringBoot</a>
+        Theme is <span class="codename">Lpisme</span> by <a href="https://www.linpx.com" target="_blank">Chakhsu</a> / Powered by <a href="#" target="_blank">RmBlog</a>
     </div>
     <div>
         &copy; 2018 <a href="index.htm">濡沫杂记</a>&nbsp;&nbsp;&nbsp;&nbsp;小站已运行&nbsp;<span class="codename">${run_year}</span>&nbsp;年&nbsp;<span class="codename">${run_day}</span>&nbsp;天&nbsp;&nbsp;&nbsp;&nbsp;

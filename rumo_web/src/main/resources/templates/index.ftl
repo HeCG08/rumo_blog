@@ -41,7 +41,7 @@
                                 <div class="index-post-button"><a href="${base}\article\${item.cid}"> Read more </a>
                                 </div>
                                 <div class="index-post-button index-post-comments">
-                                    <a href="${base}\article\${item.cid}#comments"> No comment </a>
+                                    <a href="${base}\article\${item.cid}#comments"> ${item.commentsNum} comment </a>
                                 </div>
                                 <div class="index-post-category">
                                     <a href="category\NoSQL\index.htm">${item.category}</a>

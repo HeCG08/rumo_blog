@@ -47,6 +47,14 @@ public class CommentService {
 		return commentDao.findAll();
 	}
 
+	/**
+	 *  查询全部列表(通过Cid)
+	 * @return
+	 */
+	public List<Comment> findAllByCid(Long cid) {
+		return commentDao.findAllByCid(cid);
+	}
+
 	
 	/**
 	 * 条件查询+分页

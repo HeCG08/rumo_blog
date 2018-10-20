@@ -11,7 +11,7 @@
         };
 
         document[event.add](event.load, function () {
-            var r = document.getElementById('respond-page-19');
+            var r = document.getElementById('respond-page-num');
 
             if (null != r) {
                 var forms = r.getElementsByTagName('form');
@@ -67,9 +67,31 @@
 </script>
 
 <div id="comments" class="cf">
-    <div id="respond-page-19" class="respond">
+    <div id="post-comments">
+        <#if comments??><!-- 判空处理 -->
+            <span class="comment-num">已有 ${comments?size} 条评论</span>
+            <ol class="comment-list"><!-- 评论列表 -->
+                <#list comments as comment>
+                    <div id="comment-51">
+                        <#include "avatar.ftl" encoding="UTF-8" parse=true><!-- 加载Avatar头像 -->
+                        <div class="comment-main">
+                            <p>${comment.text}</p>
+                            <div class="comment-meta">
+                                <span class="comment-author"><a href="${comment.url}" target="_blank" rel="external nofollow">${comment.author}</a></span>
+                                <time class="comment-time">${comment.created}</time>
+                                <span class="comment-reply">
+                                    <a href="books-1.htm?replyTo=51#respond-page-21" rel="nofollow" onclick="return TypechoComment.reply('comment-51', 51);">回复</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </#list>
+            </ol>
+        </#if>
+    <div>
+    <div id="respond-page-num" class="respond">
         <div class="cancel-comment-reply">
-            <a id="cancel-comment-reply-link" href="archives.htm#respond-page-19" rel="nofollow" style="display:none" onclick="return TypechoComment.cancelReply();">取消回复</a>
+            <a id="cancel-comment-reply-link" href="archives.htm#respond-page-num" rel="nofollow" style="display:none" onclick="return TypechoComment.cancelReply();">取消回复</a>
         </div>
         <span class="response">发表新评论</span>
         <form method="post" action="http://www.rumoss.cn/archives.html/comment" id="comment-form" role="form">
@@ -99,7 +121,7 @@
 
             reply : function (cid, coid) {
                 var comment = this.dom(cid), parent = comment.parentNode,
-                        response = this.dom('respond-page-19'),
+                        response = this.dom('respond-page-num'),
                         input = this.dom('comment-parent'),
                         form = 'form' == response.tagName ? response : response.getElementsByTagName('form')[0],
                         textarea = response.getElementsByTagName('textarea')[0];
@@ -135,7 +157,7 @@
             },
 
             cancelReply : function () {
-                var response = this.dom('respond-page-19'),
+                var response = this.dom('respond-page-num'),
                         holder = this.dom('comment-form-place-holder'),
                         input = this.dom('comment-parent');
 
