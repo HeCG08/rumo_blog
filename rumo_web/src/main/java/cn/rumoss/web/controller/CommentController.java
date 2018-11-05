@@ -50,7 +50,6 @@ public class CommentController {
 		return new Result(true,StatusCode.OK,"查询成功",commentService.findById(id));
 	}
 
-
 	/**
 	 * 分页+多条件查询
 	 * @param searchMap 查询条件封装

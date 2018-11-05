@@ -34,7 +34,7 @@
                             </div>
                             <div class="index-post-thumb">
                                 <a class="index-post-cover" href="${base}\article\${item.cid}">
-                                    <img class="thumb" src="usr\uploads\2018\10\3994839060.jpg?imageView2/4/w/600/h/100%">
+                                    <img class="thumb" width="400" height="200" src="https://api.ixiaowai.cn/gqapi/gqapi.php?${item.cid}"><!-- 随机风景图片,感谢小歪图片接口支持 -->
                                 </a>
                             </div>
                             <div class="index-post-meta cf">

@@ -36,7 +36,6 @@
                 </article>
 
     			<!-- 引入comments部分开始 -->
-    			<#include "comments.ftl" encoding="UTF-8" parse=true>
     			<!-- 引入comments部分结束 -->
 
 			</div>

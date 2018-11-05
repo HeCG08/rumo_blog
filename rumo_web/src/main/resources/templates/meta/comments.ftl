@@ -11,7 +11,7 @@
         };
 
         document[event.add](event.load, function () {
-            var r = document.getElementById('respond-page-num');
+            var r = document.getElementById('respond-page-${article.cid}');
 
             if (null != r) {
                 var forms = r.getElementsByTagName('form');
@@ -69,18 +69,18 @@
 <div id="comments" class="cf">
     <div id="post-comments">
         <#if comments??><!-- 判空处理 -->
-            <span class="comment-num">已有 ${comments?size} 条评论</span>
+            <span class="comment-${article.cid}">已有 ${comments?size} 条评论</span>
             <ol class="comment-list"><!-- 评论列表 -->
                 <#list comments as comment>
-                    <div id="comment-51">
+                    <div id="comment-${comment.coid}">
                         <#include "avatar.ftl" encoding="UTF-8" parse=true><!-- 加载Avatar头像 -->
                         <div class="comment-main">
                             <p>${comment.text}</p>
                             <div class="comment-meta">
                                 <span class="comment-author"><a href="${comment.url}" target="_blank" rel="external nofollow">${comment.author}</a></span>
-                                <time class="comment-time">${comment.created}</time>
+                                <time class="comment-time"><#include "datetime.ftl" encoding="UTF-8" parse=true><!-- 翻译时间 --></time>
                                 <span class="comment-reply">
-                                    <a href="books-1.htm?replyTo=51#respond-page-21" rel="nofollow" onclick="return TypechoComment.reply('comment-51', 51);">回复</a>
+                                    <a href="books-1.htm?replyTo=${comment.coid}#respond-page-21" rel="nofollow" onclick="return TypechoComment.reply('comment-${comment.coid}', ${comment.coid});">回复</a>
                                 </span>
                             </div>
                         </div>
@@ -89,13 +89,13 @@
             </ol>
         </#if>
     <div>
-    <div id="respond-page-num" class="respond">
+    <div id="respond-page-${article.cid}" class="respond">
         <div class="cancel-comment-reply">
-            <a id="cancel-comment-reply-link" href="archives.htm#respond-page-num" rel="nofollow" style="display:none" onclick="return TypechoComment.cancelReply();">取消回复</a>
+            <a id="cancel-comment-reply-link" href="archives.htm#respond-page-${article.cid}" rel="nofollow" style="display:none" onclick="return TypechoComment.cancelReply();">取消回复</a>
         </div>
         <span class="response">发表新评论</span>
-        <form method="post" action="http://www.rumoss.cn/archives.html/comment" id="comment-form" role="form">
-            <input type="text" name="author" maxlength="12" id="author" class="form-control" placeholder="称呼 *" value="" required="">
+        <form method="post" id="comment-form" role="form" onsubmit="return TypechoComment.subComment();">
+        <input type="text" name="author" maxlength="12" id="author" class="form-control" placeholder="称呼 *" value="" required="">
             <input type="email" name="mail" id="mail" class="form-control" placeholder="电子邮箱 *" value="" required="">
             <input type="url" name="url" id="url" class="form-control" placeholder="网址(http://)" value="" required="">
             <textarea name="text" id="textarea" class="form-control" onkeydown="if(event.ctrlKey&&event.keyCode==13){document.getElementById('misubmit').click();return false};" placeholder="在这里输入你的评论(Ctrl/Cmd+Enter也可以提交)..." required=""></textarea>
@@ -121,7 +121,7 @@
 
             reply : function (cid, coid) {
                 var comment = this.dom(cid), parent = comment.parentNode,
-                        response = this.dom('respond-page-num'),
+                        response = this.dom('respond-page-${article.cid}'),
                         input = this.dom('comment-parent'),
                         form = 'form' == response.tagName ? response : response.getElementsByTagName('form')[0],
                         textarea = response.getElementsByTagName('textarea')[0];
@@ -157,7 +157,7 @@
             },
 
             cancelReply : function () {
-                var response = this.dom('respond-page-num'),
+                var response = this.dom('respond-page-${article.cid}'),
                         holder = this.dom('comment-form-place-holder'),
                         input = this.dom('comment-parent');
 
@@ -172,7 +172,29 @@
                 this.dom('cancel-comment-reply-link').style.display = 'none';
                 holder.parentNode.insertBefore(response, holder);
                 return false;
+            },
+
+            subComment: function () {
+                $.ajax({
+                    type: 'post',
+                    url: 'http://www.baidu.com',
+                    data: $('#comment-form').serialize(),
+                    async: false,
+                    dataType: 'json',
+                    success: function (result) {
+                        if (result && result.success) {
+                            alert("评论成功!");
+                            window.location.reload();
+                        } else {
+                            if (result.msg) {
+                                alert(result.msg);
+                            }
+                        }
+                    }
+                });
+                return false;
             }
+
         };
     })();
     function getCommentCookie(name){
