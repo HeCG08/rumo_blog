@@ -205,9 +205,12 @@ public class FmController {
     private CommentService commentService;
 
     @RequestMapping("/article/{cid}")
-    public String article(@PathVariable Long cid, Map<String, Object> map) {
-        Content content = contentService.findByCId(cid);
-        List<Comment> comments = commentService.findAllByCid(cid);// 查询文章下面的所有评论
+    public String article(@PathVariable String cid, Map<String, Object> map) {
+        if(cid==null || "".equals(cid)) return null;
+        String convertCid = cid.replace(",","");// Fix bug cid convert problem
+        long lCid = Long.valueOf(convertCid);
+        Content content = contentService.findByCId(Long.valueOf(lCid));
+        List<Comment> comments = commentService.findAllByCid(lCid);// 查询文章下面的所有评论
         Map<String, Object> article = new HashMap<String, Object>();
         article.put("cid", content.getCid());
         article.put("datePublished", RmUtil.transDate(content.getCreated().toString()));
